@@ -19,60 +19,9 @@
 }
 
 /*VARIABLES*/
-$police-enchanted: 'GrandHotel-Regular', sans-serif;
-$police-chic: 'Playball', sans-serif;
-$police-delice: 'DancingScript-Regular', sans-serif;
-$police-palette: 'IndieFlower-Regular', sans-serif;
-$police-site: verdana, arial, sans-serif;
-
-$color-site:#579c87;
-$police-color-site:#fdcb46;
-$background-color-enchanted:#fcdfdb;
-$police-color-enchanted:#3c1218;
-$background-color-chic:#fff5fe;
-$police-color-chic-one:#c67412;
-$police-color-chic-two:#a56799;
-$police-color-chic-three:#6e4ccc;
-$background-color-delice:#f9f9f9;
-$background-color-palette:#fdfffd;
-
+@import "./variables";
 /*MIXIN*/
-@mixin create-menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 600px;
-}
-@mixin p-menu{
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-    height: 50px;
-    align-items: center;
-    @media screen and (max-width: 479px){
-        font-size: 1.5em;
-    }
-}
-@mixin menu-section{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    box-shadow: 0px 0px 15px 0px #CEC0D1;
-    margin-bottom: 200px;
-}
-@mixin menu-title{
-    display: flex;
-    justify-content: space-around;
-}
-@mixin li-menu{
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-}
+@import "./mixins";
 /*ANIMATIONS*/
 /*VIBRATIONS*/
 @keyframes wiggle{
@@ -86,15 +35,6 @@ $background-color-palette:#fdfffd;
 @keyframes jumpdot{
     0%{transform: translateY(0px);}
     100%{transform: translateY(-5px);}
-}
-/*SOULIGNEMENT*/
-@mixin h3-underline{
-    text-decoration: none;
-    transition: background-size 1000ms;
-    background-size: 0 100%;
-  &:hover {
-    background-size: 100% 100%;
-  }
 }
 
 /*RESET*/
@@ -180,7 +120,6 @@ header{
         font-size: 2.5em;
     }
     h2{
-        margin-bottom: 0;
     }
     p{
         margin: 0;
@@ -192,9 +131,8 @@ header{
     font-family: $police-chic;
     font-size: 2em;
     h2{
-        margin-bottom: 0;
         background: linear-gradient(40deg,#d8852e 40%, #905bfd 55%);
-        -webkit-text-fill-color:transparent;
+        -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
     p{
@@ -210,7 +148,6 @@ header{
         background: linear-gradient(50deg, #0431df 35%, #0887fb 50%);
         -webkit-text-fill-color:transparent;
         -webkit-background-clip: text;
-        margin-bottom: 0;
     }
     p{
         margin: 0;
@@ -226,7 +163,6 @@ header{
         background: linear-gradient(45deg, #42973c 35%, #bfff7e 50%);
         -webkit-text-fill-color:transparent;
         -webkit-background-clip: text;
-        margin-bottom: 0;
     }
     p{
         margin: 0;
@@ -321,6 +257,9 @@ footer{
 
 .enchanted-menu, .menu-chic-french, .menu-delice-papille, .menu-palette-gout{
     @include menu-section();
+    .return{
+        margin-bottom: 10%;
+    }
     @media screen and (max-width:  479px){
         padding-left: 2%;
         padding-right: 2%;
@@ -437,9 +376,11 @@ footer{
     background-color: $background-color-chic;
     font-family: $police-chic;
     article{
-        font-size: 1.5em;
+        font-size: 1.8em;
         li{
+            @media screen and (max-width: 479px){
             font-size: smaller;
+            }
         }
         h3{
             font-size: xx-large;

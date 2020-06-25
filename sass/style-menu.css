@@ -22,6 +22,7 @@
 }
 
 /*VARIABLES*/
+/*VARIABLES*/
 /*MIXIN*/
 /*ANIMATIONS*/
 /*VIBRATIONS*/
@@ -92,7 +93,6 @@
   }
 }
 
-/*SOULIGNEMENT*/
 /*RESET*/
 html, body {
   margin: 0;
@@ -218,10 +218,6 @@ header h1 a {
   font-size: 2.5em;
 }
 
-.menu-enchanted h2 {
-  margin-bottom: 0;
-}
-
 .menu-enchanted p {
   margin: 0;
   font-family: 'Segoe Script', sans-serif;
@@ -234,7 +230,6 @@ header h1 a {
 }
 
 .menu-chic h2 {
-  margin-bottom: 0;
   background: linear-gradient(40deg, #d8852e 40%, #905bfd 55%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -255,7 +250,6 @@ header h1 a {
   background: linear-gradient(50deg, #0431df 35%, #0887fb 50%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  margin-bottom: 0;
 }
 
 .menu-delice p {
@@ -274,7 +268,6 @@ header h1 a {
   background: linear-gradient(45deg, #42973c 35%, #bfff7e 50%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  margin-bottom: 0;
 }
 
 .menu-palette p {
@@ -447,6 +440,10 @@ footer nav {
   -webkit-box-shadow: 0px 0px 15px 0px #CEC0D1;
           box-shadow: 0px 0px 15px 0px #CEC0D1;
   margin-bottom: 200px;
+}
+
+.enchanted-menu .return, .menu-chic-french .return, .menu-delice-papille .return, .menu-palette-gout .return {
+  margin-bottom: 10%;
 }
 
 @media screen and (max-width: 479px) {
@@ -643,11 +640,13 @@ footer nav {
 }
 
 .menu-chic-french article {
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
-.menu-chic-french article li {
-  font-size: smaller;
+@media screen and (max-width: 479px) {
+  .menu-chic-french article li {
+    font-size: smaller;
+  }
 }
 
 .menu-chic-french article h3 {
