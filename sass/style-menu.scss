@@ -1,0 +1,595 @@
+/*POLICES*/
+@font-face{
+    font-family: 'DancingScript-Regular';
+    src: url('./police/DancingScript-Regular.ttf');
+}
+@font-face{
+    font-family: 'IndieFlower-Regular';
+    src: url('./police/IndieFlower-Regular.ttf');
+}
+@font-face{
+    font-family: 'Playball';
+    src: url('./police/Playball.ttf');
+    font-weight: normal;
+    font-style: normal;
+    }
+@font-face{
+    font-family: 'GrandHotel-Regular';
+    src: url('./police/GrandHotel-Regular.ttf')
+}
+
+/*VARIABLES*/
+$police-enchanted: 'GrandHotel-Regular', sans-serif;
+$police-chic: 'Playball', sans-serif;
+$police-delice: 'DancingScript-Regular', sans-serif;
+$police-palette: 'IndieFlower-Regular', sans-serif;
+$police-site: verdana, arial, sans-serif;
+
+$color-site:#579c87;
+$police-color-site:#fdcb46;
+$background-color-enchanted:#fcdfdb;
+$police-color-enchanted:#3c1218;
+$background-color-chic:#fff5fe;
+$police-color-chic-one:#c67412;
+$police-color-chic-two:#a56799;
+$police-color-chic-three:#6e4ccc;
+$background-color-delice:#f9f9f9;
+$background-color-palette:#fdfffd;
+
+/*MIXIN*/
+@mixin create-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 600px;
+}
+@mixin p-menu{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    height: 50px;
+    align-items: center;
+    @media screen and (max-width: 479px){
+        font-size: 1.5em;
+    }
+}
+@mixin menu-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 0px 0px 15px 0px #CEC0D1;
+    margin-bottom: 200px;
+}
+@mixin menu-title{
+    display: flex;
+    justify-content: space-around;
+}
+@mixin li-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+/*ANIMATIONS*/
+/*VIBRATIONS*/
+@keyframes wiggle{
+    0% { transform: rotate(3deg); }
+   3% { transform: rotate(-3deg); }
+   4% { transform: rotate(-5deg); }
+   5% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+/*REBOND*/
+@keyframes jumpdot{
+    0%{transform: translateY(0px);}
+    100%{transform: translateY(-5px);}
+}
+/*SOULIGNEMENT*/
+@mixin h3-underline{
+    text-decoration: none;
+    transition: background-size 1000ms;
+    background-size: 0 100%;
+  &:hover {
+    background-size: 100% 100%;
+  }
+}
+
+/*RESET*/
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/*PAGE ACCUEIL*/
+header{
+    width: 100%;
+    height: 150px;
+    background-color: $color-site;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: $police-color-site;
+        font-family: $police-site;
+        font-size: 3.5em;
+        letter-spacing: -6px;
+        @media screen and (max-width:  479px){
+            font-size: 2.5em;
+        }
+        a{
+            text-decoration: none;
+            color: $police-color-site;
+        }
+    }
+    
+}
+.general-menu{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0 90px 0;
+    section{
+        @media screen and (max-width:  479px){
+            font-size: 1.3em;
+            height: 100vw;
+            width: calc(100vw-20px);
+        }
+        
+    }
+}
+.menu-enchanted, .menu-chic, .menu-delice, .menu-palette{
+    @include create-menu();
+    width: 500px;
+    box-shadow: 0px 0px 15px 0px #CEC0D1;
+    margin: 5%;
+}
+.menu-enchanted{
+    background-color: $background-color-enchanted;
+    font-family: $police-enchanted;
+    color: $police-color-enchanted;
+    font-size: 2em;
+    i{
+        background: linear-gradient(3deg, #ca283b 10%, #f78f6a 75%);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        font-size: 2.5em;
+    }
+    h2{
+        margin-bottom: 0;
+    }
+    p{
+        margin: 0;
+        font-family: 'Segoe Script', sans-serif;
+    }
+}
+.menu-chic{
+    background-color: $background-color-chic;
+    font-family: $police-chic;
+    font-size: 2em;
+    h2{
+        margin-bottom: 0;
+        background: linear-gradient(40deg,#d8852e 40%, #905bfd 55%);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+    }
+    p{
+        margin: 0;
+        color: $police-color-chic-one;
+    }
+}
+.menu-delice{
+    background-color: $background-color-delice;
+    font-family: $police-delice;
+    font-size: 2em;
+    h2{
+        background: linear-gradient(50deg, #0431df 35%, #0887fb 50%);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        margin-bottom: 0;
+    }
+    p{
+        margin: 0;
+        font-weight: bold;
+        color: rgb(71, 171, 230); 
+    }
+}
+.menu-palette{
+    background-color: $background-color-palette;
+    font-family: $police-palette;
+    font-size: 2em;
+    h2{
+        background: linear-gradient(45deg, #42973c 35%, #bfff7e 50%);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        margin-bottom: 0;
+    }
+    p{
+        margin: 0;
+        color: rgb(122, 238, 122);
+    }
+}
+.zoom{
+    @include create-menu();
+    color: $police-color-enchanted;
+    text-decoration: none;
+    transform: scale(0.8);
+    transition: transform 600ms ease-in-out;
+    @media screen and (max-width:  479px){
+        transform: scale(0.8);
+    }
+    &:hover{
+        transform: scale(1);
+        opacity: 0.7;
+        @media screen and (max-width:  479px){
+            transform: scale(1);
+        }
+    }
+}
+.soon{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        background-color: $color-site;
+        color: $police-color-site;
+        font-family: $police-site;
+        width: 30%;
+        text-align: center;
+        font-size: 2em;
+        border-radius: 35px;
+        padding: 1%;
+        @media screen and (min-width:  479px) and (max-width: 920px){
+            width: 70%;
+        }
+        @media screen and (max-width:  479px){
+            width: 70%;
+            font-size: 1.5em;
+        }
+    }
+    .jump-point{
+        display: inline-block;
+        animation: jumpdot 1000ms ease-in-out infinite alternate;
+        &:nth-child(2){
+            animation-delay: 300ms;
+        }
+        &:nth-child(3){
+            animation-delay: 600ms;
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: $color-site;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.contact{
+    animation: wiggle 1s infinite;
+    a{
+        color: $police-color-site;
+        font-family: $police-site;
+        font-size: 2em;
+        text-decoration: none;
+            @media screen and (min-width:  479px) and (max-width: 915px){
+                font-size: 1.5em;
+            }
+            @media screen and (max-width:  479px){
+            font-size: 1.2em;
+            }
+    }
+}
+
+.enchanted-menu, .menu-chic-french, .menu-delice-papille, .menu-palette-gout{
+    @include menu-section();
+    @media screen and (max-width:  479px){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    h4{
+        text-align: justify;
+        width: 70%;
+        font-weight: normal;
+        margin-bottom: 0;
+        @media screen and (max-width:  479px){
+            width: 100%;
+            text-align: center;
+        }
+    }
+    ul{
+        margin: 0;
+    }
+    li{
+        list-style: none;
+        @include li-menu();
+        @media screen and (max-width:  479px){
+            flex-wrap: wrap;
+            p{
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+    .menu-title{
+        @include menu-title();
+        width: 100%;
+        img{
+            width: 25%;
+        }
+        h3{
+            @include h3-underline();
+        }
+    }
+    ul{
+        padding-left: 0;
+        @media screen and (max-width:  479px){
+            padding: 0;
+        }
+    }
+}
+
+/*MENU NOTE ENCHANTEE*/
+.enchanted-menu{
+    background-color: $background-color-enchanted;
+    font-family: $police-enchanted;
+    .head-title h2{
+        font-weight: normal;
+        font-size: 3em;
+        @media screen and (max-width:  479px){
+            font-size: 2.5em;
+        }
+    }
+    article{
+        font-size: 2em;
+        @media screen and (max-width:  479px){
+            font-size: 1.3em;
+        }
+        i{
+            font-size: 1.5em;
+        }
+    }
+}
+.menu1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    & > p{
+        @include p-menu();
+    }
+    i{
+        font-size: 6em;
+        background: linear-gradient(3deg, #ca283b 20%, #f78f6a 75%);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip: text;
+        text-align: center;
+        padding-top: 5%;
+        @media screen and (max-width:  479px){
+            font-size: 4em;
+            padding-top: 10%;
+        }
+    }
+    h3{
+        background: linear-gradient(to top, rgb(12, 10, 10) 0%, rgb(15, 6, 6) 1px, transparent 3px) no-repeat left bottom / 0 100%;
+    }
+    .menu-list3{
+        h4{
+            width: 90%;
+        }
+        li{
+            padding-bottom: 2%;
+            @media screen and (max-width:  479px){
+                padding-bottom: 8%;
+            }
+        }
+    }
+    ul{
+        @media screen and (max-width:  479px){
+            padding: 0;
+        }
+    }
+}
+
+
+
+/*MENU CHIC FRANCAIS*/
+
+.menu-chic-french{
+    background-color: $background-color-chic;
+    font-family: $police-chic;
+    article{
+        font-size: 1.5em;
+        li{
+            font-size: smaller;
+        }
+        h3{
+            font-size: xx-large;
+            @media screen and (max-width: 479px){
+                font-size: 1em;
+                font-weight: normal;
+            }
+        }
+        span{
+            padding-bottom: 3%;
+            @media screen and (max-width:  479px){
+                width: 100%;
+            }
+        }
+    }
+    .nth-child1{
+        color: #c67412;
+        h3{
+            @include h3-underline();
+            background: linear-gradient(to top, rgb(198, 116, 18) 0%, rgb(198, 116, 18) 1px, transparent 3px) no-repeat left bottom / 0 100%;
+        }
+        span{
+            @media screen and (max-width:  479px){
+                width: 100%;
+            }
+        }
+    }
+    .nth-child2{
+        color: #a56799;
+        h3{
+            @include h3-underline();
+            background: linear-gradient(to top, rgb(165, 103, 153) 0%, rgb(165, 103, 153) 1px, transparent 3px) no-repeat left bottom / 0 100%;
+        }
+        span{
+            @media screen and (max-width:  479px){
+                width: 100%;
+            }
+        }
+    }
+    .nth-child3{
+        color: #6e4ccc;
+        h4{
+            width: 90%;
+        }
+        h3{
+            @include h3-underline();
+            background: linear-gradient(to top, rgb(110, 76, 204) 0%, rgb(110, 76, 204) 1px, transparent 3px) no-repeat left bottom / 0 100%;
+        }
+        li{
+            padding-bottom: 2%;
+        }
+    }
+    .head-title{
+        h2{
+            background: linear-gradient(55deg,#d8852e 40%, #905bfd 55%);
+            -webkit-text-fill-color:transparent;
+            -webkit-background-clip: text;
+            padding: 5%;
+            font-size: 3em;
+            @media screen and (max-width:  479px){
+                font-size: 1.8em;
+            }
+        }
+    }
+}
+.menu2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    & > p{
+        @include p-menu();
+    }
+}
+/*MENU DELICE DES PAPILLES*/
+
+.menu-delice-papille{
+    background-color: $background-color-delice;
+    font-family: $police-delice;
+    span{
+        @media screen and (max-width:  479px){
+        width: 100%;
+        }
+    }
+    article{
+        font-size: 1.5em;
+    }
+    h3{
+        @include h3-underline();
+        background: linear-gradient(to top, rgb(40, 115, 201) 0%, rgb(40, 115, 201) 1px, transparent 3px) no-repeat left bottom / 0 100%;
+        font-size: xx-large;
+        @media screen and (max-width:  479px){
+            font-size: 1.2em;
+        }
+    }
+    .head-title{
+        h2{
+            background: linear-gradient(50deg, #0431df 35%, #0887fb 50%);
+            -webkit-text-fill-color:transparent;
+            -webkit-background-clip: text;
+            font-weight: normal;
+            font-size: 3em;
+            @media screen and (max-width:  479px){
+                font-size: 2.2em;
+            }
+        }
+    }
+    .menu-list{
+        font-size: larger;
+        @media screen and (max-width:  479px){
+            font-size: smaller;
+        }
+    }
+}
+.menu3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    & > p{
+        @include p-menu();
+    }
+
+}
+
+/*MENU PALETTE DU GOUT*/
+
+.menu-palette-gout{
+    background-color: $background-color-palette;
+    font-family: $police-palette;
+    article{
+        font-size: 1.5em;
+        li{
+            @media screen and (max-width:  479px){
+                font-size: large;
+            }
+        }
+    }
+    h3{
+        @include h3-underline();
+        background: linear-gradient(to top, rgb(28, 206, 42) 0%, rgb(28, 206, 42) 1px, transparent 3px) no-repeat left bottom / 0 100%;
+        font-size: xx-large;
+        @media screen and (max-width:  479px){
+            font-size: unset;
+        }
+    }
+    .menu-list span{
+        @media screen and (max-width:  479px){
+            width: 100%;
+        }
+    }
+    .head-title{
+        h2{
+            background: linear-gradient(45deg, #42973c 35%, #bfff7e 50%);
+            -webkit-text-fill-color:transparent;
+            -webkit-background-clip: text;
+            font-weight: normal;
+            font-size: 3.5em;
+            @media screen and (max-width:  479px){
+                font-size: 2.2em;
+            }
+        }
+    }
+}
+.menu4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    & > p{
+        @include p-menu();
+    }
+}
