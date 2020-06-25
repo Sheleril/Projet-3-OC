@@ -104,6 +104,26 @@ html, body{
     height: 100%;
 }
 
+/*MENTION LEGALE*/
+.mention-legal{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    h2, h3{
+       text-align: center;
+    }
+    h2{
+        font-size: 2.5em;
+        text-decoration: underline #FF3028;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    p{
+        text-align: center;
+    }
+}
+
 /*PAGE ACCUEIL*/
 header{
     width: 100%;

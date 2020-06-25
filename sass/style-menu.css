@@ -100,6 +100,36 @@ html, body {
   height: 100%;
 }
 
+/*MENTION LEGALE*/
+.mention-legal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5%;
+}
+
+.mention-legal h2, .mention-legal h3 {
+  text-align: center;
+}
+
+.mention-legal h2 {
+  font-size: 2.5em;
+  -webkit-text-decoration: underline #FF3028;
+          text-decoration: underline #FF3028;
+}
+
+.mention-legal h3 {
+  font-size: 1.5em;
+}
+
+.mention-legal p {
+  text-align: center;
+}
+
 /*PAGE ACCUEIL*/
 header {
   width: 100%;
