@@ -119,8 +119,6 @@ header{
         -webkit-background-clip: text;
         font-size: 2.5em;
     }
-    h2{
-    }
     p{
         margin: 0;
         font-family: 'Segoe Script', sans-serif;
@@ -259,10 +257,6 @@ footer{
     @include menu-section();
     .return{
         margin-bottom: 10%;
-    }
-    @media screen and (max-width:  479px){
-        padding-left: 2%;
-        padding-right: 2%;
     }
     h4{
         text-align: justify;

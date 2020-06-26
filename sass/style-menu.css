@@ -446,13 +446,6 @@ footer nav {
   margin-bottom: 10%;
 }
 
-@media screen and (max-width: 479px) {
-  .enchanted-menu, .menu-chic-french, .menu-delice-papille, .menu-palette-gout {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
-
 .enchanted-menu h4, .menu-chic-french h4, .menu-delice-papille h4, .menu-palette-gout h4 {
   text-align: justify;
   width: 70%;
