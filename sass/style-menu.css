@@ -130,6 +130,10 @@ html, body {
   text-align: center;
 }
 
+.mention_legal_part {
+  margin-bottom: inherit;
+}
+
 /*PAGE ACCUEIL*/
 header {
   width: 100%;
