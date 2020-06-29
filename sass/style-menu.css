@@ -134,6 +134,12 @@ html, body {
   margin-bottom: inherit;
 }
 
+@media screen and (max-width: 479px) {
+  .mention_legal_part {
+    margin-bottom: 100px;
+  }
+}
+
 /*PAGE ACCUEIL*/
 header {
   width: 100%;
@@ -185,7 +191,6 @@ header h1 a {
   .general-menu section {
     font-size: 1.3em;
     height: 100vw;
-    width: calc(100vw-20px);
   }
 }
 
@@ -334,6 +339,12 @@ header h1 a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 479px) {
+  .soon {
+    height: 100px;
+  }
 }
 
 .soon p {

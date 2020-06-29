@@ -65,6 +65,9 @@ html, body{
 }
 .mention_legal_part{
     margin-bottom: inherit;
+    @media screen and (max-width: 479px){
+        margin-bottom: 100px;
+    }
 }
 
 /*PAGE ACCUEIL*/
@@ -100,7 +103,6 @@ header{
         @media screen and (max-width:  479px){
             font-size: 1.3em;
             height: 100vw;
-            width: calc(100vw-20px);
         }
         
     }
@@ -193,6 +195,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 479px){
+        height: 100px;
+    }
     p{
         background-color: $color-site;
         color: $police-color-site;
