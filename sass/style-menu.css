@@ -553,17 +553,17 @@ footer nav {
   }
 }
 
-.enchanted-menu article {
+.enchanted-menu article, .enchanted-menu .icone {
   font-size: 2em;
 }
 
 @media screen and (max-width: 479px) {
-  .enchanted-menu article {
+  .enchanted-menu article, .enchanted-menu .icone {
     font-size: 1.3em;
   }
 }
 
-.enchanted-menu article i {
+.enchanted-menu article i, .enchanted-menu .icone i {
   font-size: 1.5em;
 }
 
